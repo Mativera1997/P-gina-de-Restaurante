@@ -1,0 +1,327 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+nav{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	min-height: 8vh;
+	background-image: url("imagenes/fondo.jpg");
+	font-family: 'Noto Sans TC', sans-serif;
+}
+
+#fondo{
+	margin-left: -150px;
+	background-color: #00aae4;
+	color: #ffffff;
+}
+
+.logo img{
+	width: 85px;
+	height: 85px;
+	margin-left: -150px;
+	margin-top: 20px;
+}
+.nav-principal{
+	display: flex;
+	justify-content: space-around;
+	width: 60%;
+	margin-right: -160px;
+}
+.nav-principal img{
+	width: 20px;
+	height: 20px;
+}
+.nav-principal a:hover{
+	color: #eeec7f;
+}
+.nav-principal li{
+	list-style: none;
+}
+/* ================= TEXTO MENU DESPEGABLE  ================================================*/
+.nav-principal a{
+	margin-top: 10px;
+	color: #fca626;
+	text-decoration: none;
+	letter-spacing: 2px;
+	font-weight: bold;
+	font-size: 25px;
+	font-family: 'Courier New', Courier, monospace
+}
+.acomodo{
+	display: none;
+	cursor: pointer;
+}
+/* ================= BOTON PARA MENU DESPLEGABLE  ================================================*/
+.acomodo div{
+	width: 25px;
+	height: 5px;
+	background-color: #000000;
+	margin: 5px;
+	transition: all 0.3s ease;
+}
+
+@media screen and (max-width:1024px){
+	.nav-principal{
+		color: #00aae4;
+		width: 60%;
+	}
+}
+@media screen and (max-width:950px){
+	body{
+		overflow-x: hidden;
+	}
+	/* ================= MENU DESPLEGABLE  ================================================*/
+	.nav-principal{
+		position: absolute;
+		right: 80px;
+		height: 92vh;
+		top: 8vh;
+		background-color: #f7f327;
+		display: flex;
+		flex-direction: column;
+		align-items:center;
+		width: 50%;
+		transform: translateX(100%);
+		transition: transform 0.5s ease-in;
+	}
+	.nav-principal li{
+		opacity: 1;
+	}
+	/* ================= CENTRADO DE LOGO Y CABECERA ================================================*/
+	.acomodo{
+		display: block;
+	}
+	/* ================= FIN DE CENTRADO DE LOGO Y CABECERA ================================================*/
+}
+.nav-activo{
+	transform: translateX(0%);
+}
+
+@keyframes navLinkFade{
+	from{
+		opacity: 0;
+		transform: translateX(50px);
+	}
+	to{
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}
+.toggle .linea1{
+	transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .linea2{
+	opacity: 0;
+}
+.toggle .linea3{
+	transform: rotate(50deg) translate(-5px,-6px);
+}
+
+/* =================FIN DE NAV BAR================================================*/
+h1{
+	color: #f5dd03;
+	text-align: center;
+	font-size: 60px; font-family: 'Courier New', Courier, monospace;
+	background-image: url("imagenes/fondo2.jpg");
+}
+/* =================FIN DE TITULO================================================*/
+
+/* ================= COMIENZO IMAGEN SLIDE-INICIO==============================*/
+.slider{
+	width: 95%;
+	margin: auto;
+	overflow: hidden;
+	margin-top: 20px;
+}
+.slider ul{
+	display: flex;
+	padding: 0;
+	width: 400%;
+	animation: roto 15s infinite alternate;
+}
+.slider ul:hover{
+	animation-play-state: paused; 
+	cursor: pointer; 
+}
+.slider li{
+	width: 100%;
+	list-style: none;
+}
+.slider img{
+	width: 100%;
+	height: 550px;
+}
+@keyframes roto{
+	0%{margin-left: 0%;}
+	20%{margin-left: 0%;}
+
+	25%{margin-left: -100%;}
+	45%{margin-left: -100%;}
+
+	50%{margin-left: -200%;}
+	70%{margin-left: -200%;}
+
+	75%{margin-left: -300%;}
+	100%{margin-left: -300%;}
+}
+
+/* =================TEXTO DESCRIPCION INICIO ==============================*/
+.texto-localidad{
+	background-color: #e5ff00;
+	border-radius: 45px;
+	/*background-image: url(imagenes/ferro.jpg);*/
+	color: #000000;
+	margin-top: 0px;
+	font-family: 'Dancing Script', cursive;
+	width: 90%;
+	height: auto;
+	margin-left: 65px;
+}
+h2{
+	margin-top: 25px;
+	text-align: center;
+	color: #ffc404;
+	font-size: 350%;
+}
+.texto-localidad #tl1{
+	text-align: center;
+	margin-top: 20px;
+	font-size: 190%;
+}
+.texto-localidad #tl3{
+	text-align: center;
+	margin-top: 10px;
+	font-size: 235%;
+}
+.texto-localidad #tl2{
+	text-align: center;
+	margin-top: 10px;
+	font-size: 190%;
+}
+.texto-localidad p a{
+	font-size: 35%;
+}
+#comida { 
+	background-color: rgb(255, 153, 0);
+	font-family:cursive ; text-align:justify
+	color: #ffffff;	
+}
+
+h3 {
+	text-align: center;
+  color: rgb(255, 0, 0);
+  background-color: rgb(255, 230, 0);
+}
+
+/* =================FOOTER ==============================*/
+.footer{
+	background-color: #00aae4;
+	text-align: center;
+	margin-top: 20px;
+	font-family: 'Noto Sans TC', sans-serif;
+	margin-bottom: 0px;
+	color: #ffffff;
+
+}
+.footer p{
+	margin-top: 5px;
+} 
+.footer p a{
+	margin-top: 0px;
+}
+#direccion{
+	text-align: center;
+	font-family: 'Noto Sans TC', sans-serif;
+}
+
+
+/*    footer color cambio */
+.footer2{
+	background-color: red;
+	color: green;
+
+}
+/* =================Contacto Redes ==============================*/
+.sredes{
+	width: 95%;
+	margin: auto;
+	overflow: hidden;
+	margin-top: 20px;
+}
+.sredes ul{
+	display: flex;
+	padding: 0;
+	width: 300%;
+	animation: cambio 10s infinite alternate;
+}
+.sredes ul:hover{
+	animation-play-state: paused; 
+	cursor: pointer; 
+}
+.sredes li{
+	width: 100%;
+	list-style: none;
+}
+.sredes img{
+	margin-left: 45%;
+	width: 10%;
+	height: 150px;
+}
+@keyframes cambio{
+	0%{margin-left: 0%;}
+	30%{margin-left: 0%;}
+
+	35%{margin-left: -100%;}
+	70%{margin-left: -100%;}
+
+	75%{margin-left: -200%;}
+	100%{margin-left: -200%;}
+}
+/* ================= NOSOTROS ==============================*/
+.cont-tradicionales p{
+	text-align: center;
+	font-family: 'Noto Sans TC', sans-serif;
+	margin-top: 10px;
+	color: #00aae4;
+}
+#direccion{
+	text-align: center;
+	font-family: 'Noto Sans TC', sans-serif;
+	color: #00aae4;
+}
+#iframe_google {
+	 width:90%; height: 480px;
+}
+
+
+/*============MENU============*/
+div.servicio {
+  width: 100%;
+  margin: 20px auto;
+  color: #ffffff;
+  padding: 20px;
+  font-family: 'Courier New', Courier, monospace
+}
+div.servicio h3 {
+	text-align: center;
+	font-size: 150%;
+}
+aside{
+	font-size: 110%;
+	margin-top: 50px;
+}
+div.servicio img.izquierda {
+  float: left;
+  margin-right: 15px;
+  margin-top: 0px;
+}
+
+div.reset {
+  clear: both;
+}
+body{
+	background-image: url("imagenes/fondo.png");
+}
